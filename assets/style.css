@@ -1,0 +1,154 @@
+/* Creative Email Link Styles */
+.creative-email {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    color: #355834;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+}
+.creative-email .email-icon {
+    margin-right: 0.5em;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+.creative-email::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ffd700, #a7c957);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+.creative-email:hover {
+    color: #ffd700;
+}
+.creative-email:hover .email-icon {
+    transform: rotate(-20deg) scale(1.2);
+}
+.creative-email:hover::after {
+    transform: scaleX(1);
+}
+body {
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0e7af 0%, #a7c957 100%);
+    color: #2d2d2d;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #355834;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.navbar a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.navbar a:hover {
+    color: #fff;
+}
+
+.hero {
+    background: url('https://zelda.nintendo.com/assets/img/home/hero-bg.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 4rem 2rem 2rem 2rem;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px #355834;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.cta {
+    display: inline-block;
+    background: #ffd700;
+    color: #355834;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s;
+}
+.cta:hover {
+    background: #fff;
+    color: #355834;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: 2px solid #a7c957;
+}
+.card h2 {
+    color: #355834;
+    margin-top: 0;
+}
+.card ul {
+    padding-left: 1.5rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #355834;
+    color: #ffd700;
+    font-size: 1rem;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        gap: 1rem;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    main {
+        padding: 0;
+    }
+    .card {
+        padding: 1rem;
+    }
+}
