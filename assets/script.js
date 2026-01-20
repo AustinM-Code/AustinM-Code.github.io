@@ -1,11 +1,30 @@
 // Interactive and animated effects for links and buttons
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile hamburger menu functionality
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
     // Animate nav links on hover
     document.querySelectorAll('.navbar a').forEach(function(link) {
         link.addEventListener('mouseenter', function() {
             link.style.transform = 'scale(1.15)';
-            link.style.textShadow = '0 0 8px #ffd700';
+            link.style.textShadow = '0 0 8px #0891b2';
         });
         link.addEventListener('mouseleave', function() {
             link.style.transform = '';
@@ -14,14 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Animate buttons on hover and click
-    document.querySelectorAll('.cta, button').forEach(function(btn) {
+    document.querySelectorAll('.cta, button, .contact-btn').forEach(function(btn) {
         btn.addEventListener('mouseenter', function() {
             btn.style.transform = 'scale(1.08)';
-            btn.style.boxShadow = '0 0 16px #ffd700';
         });
         btn.addEventListener('mouseleave', function() {
             btn.style.transform = '';
-            btn.style.boxShadow = '';
         });
         btn.addEventListener('click', function(e) {
             // Ripple effect
@@ -47,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             position: absolute;
             width: 40px;
             height: 40px;
-            background: rgba(255, 215, 0, 0.5);
+            background: rgba(8, 145, 178, 0.5);
             border-radius: 50%;
             pointer-events: none;
             transform: translate(-50%, -50%) scale(0);
@@ -60,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: 0;
             }
         }
-        .cta, button {
+        .cta, button, .contact-btn {
             position: relative;
             overflow: hidden;
         }

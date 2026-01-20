@@ -3,42 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Austin - Network Engineer Portfolio</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
             <span>Austin's Portfolio</span>
         </div>
-        <ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <header class="hero">
-        <h1>Welcome!</h1>
-        <p>I'm glad you found your way to my personal portfolio page.</p>
-        <a href="#projects" class="cta">View My Work</a>
+        <div class="hero-content">
+            <h1>Austin Morrow</h1>
+            <p class="hero-subtitle">Network Engineer, Web Developer & Creative Problem Solver</p>
+            <p class="hero-description">Crafting digital solutions with modern technologies</p>
+            <a href="#projects" class="cta">View My Projects</a>
+        </div>
     </header>
     <main>
         <section id="about" class="card">
             <h2>About Me</h2>
-            <p>I'm a web developer with a passion for creativity, design, and building engaging digital experiences.</p>
+            <p>I'm a network engineer with a passion for troubleshooting, creativity, design, and building engaging digital experiences.</p>
         </section>
         <section id="projects" class="card">
             <h2>Projects</h2>
-            <ul>
-                <li><strong>Productivity App:</strong> A tool to help organize your workflow.</li>
-                <li><strong>Interactive Map:</strong> Visualize data and locations with ease.</li>
-                <li><strong>Pet Tracker:</strong> Keep track of your furry friends!</li>
-            </ul>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Productivity App</h3>
+                    <p>A streamlined tool designed to help teams organize workflows and boost productivity with intuitive task management.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Interactive Map</h3>
+                    <p>An advanced mapping solution for visualizing geospatial data with interactive features and real-time updates.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Mapbox</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Pet Tracker</h3>
+                    <p>A comprehensive platform for pet owners to monitor health records, schedule appointments, and track their pets.</p>
+                    <div class="project-tags">
+                        <span class="tag">Full Stack</span>
+                        <span class="tag">Database</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Personal Web Server</h3>
+                    <p>Built and configured a dedicated web server from hardware to deployment. Set up Proxmox virtualization, Ubuntu VM, Nginx web server, and DNS configuration to host this portfolio with enterprise-grade infrastructure.</p>
+                    <div class="project-tags">
+                        <span class="tag">Proxmox</span>
+                        <span class="tag">Ubuntu</span>
+                        <span class="tag">Nginx</span>
+                        <span class="tag">DNS</span>
+                        <span class="tag">SSH</span>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="contact" class="card">
-            <h2>Contact</h2>
-            <p>Ready to connect? <a href="mailto:your@email.com" class="creative-email">Email me</a> or use the form below!</p>
+            <h2>Get In Touch</h2>
+            <p>I'm always interested in discussing new projects and opportunities. Feel free to reach out!</p>
+            <a href="mailto:your@email.com" class="contact-btn">Send Me an Email</a>
         </section>
     </main>
     <footer>
